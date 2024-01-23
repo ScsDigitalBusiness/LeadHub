@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Arimo", sans-serif;
+}
+
+.content {
+  z-index: 0;
+  display: grid;
+
+  height: 100vh;
+
+  grid-template-areas:
+    "slidebar header "
+    "slidebar dash ";
+
+  width: 100vw;
+}
+
+
+
+
+.btn {
+  height: 7vh;
+  width: 100%;
+  font-size: 1.2em;
+  border-radius: 5vh;
+  background-color: black;
+  color: white;
+  border: none;
+  transition: 1.02s;
+  cursor: pointer;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.btn:hover {
+  transform: scale(1.05);
+  background: silver;
+  color: black;
+}

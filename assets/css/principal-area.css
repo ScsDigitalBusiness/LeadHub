@@ -1,0 +1,618 @@
+.dash {
+  height: calc(100vh - 15vh);
+  grid-area: dash;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10vh;
+  width: calc(100vw - 7vw);
+  overflow-y: scroll;
+  background-color: white;
+}
+
+#area-leads {
+  border: none;
+  margin: 0;
+  width: 95%;
+  outline: none;
+  border-collapse: collapse;
+  background-color: #eeeeee;
+  height: 10%;
+  border-radius: 2vh;
+}
+#area-leads thead {
+  background-color: #c4c4c4;
+
+  border-radius: 2vh;
+}
+#border-radius-top-right {
+  border-top-right-radius: 2vh;
+}
+#border-radius-top-left {
+  border-top-left-radius: 2vh;
+}
+
+#area-leads th {
+  border-bottom: 1px solid #929292;
+  background-color: #b8b8b8;
+  color: white;
+  border: none;
+  padding: 2vh;
+}
+.th-icons {
+  height: 3vh;
+}
+#area-leads td {
+  text-align: center;
+  padding: 0.7vh;
+  margin: 0;
+  border: none;
+
+  color: rgb(73, 73, 73);
+}
+#nome-lead {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  gap: 3vh;
+}
+#nome-lead img {
+  height: 5vh;
+}
+#new-Lead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5vh;
+  clip-path: circle();
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+#new-Lead img {
+  height: 100%;
+}
+#new-Lead img:hover {
+  filter: grayscale(1);
+  transform: scale(1.05);
+}
+
+.lead-mail {
+  width: 30vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+.lead-local-infos {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.register {
+  padding-top: 7vh;
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  background-color: white;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.close {
+  height: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.close:hover {
+  background-color: red;
+  transition: 1.1s;
+}
+.close img {
+  height: 100%;
+  filter: grayscale(0);
+}
+.close img:hover {
+  filter: invert(1);
+}
+.close2 {
+  height: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.close2:hover {
+  background-color: red;
+}
+.close2 img:hover {
+  filter: invert(1);
+}
+.close2 img {
+  height: 100%;
+}
+.register-area {
+  border: none;
+  color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.register-area form {
+  display: grid;
+  grid-template-areas:
+    "simple infos"
+    "simple local";
+  justify-content: center;
+  flex-direction: row;
+
+  height: 100%;
+
+  padding-bottom: 10vh;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.input-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.inputs input {
+  width: 20vw;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+
+  margin: 1vh;
+  color: black;
+}
+.inputs input:focus {
+  outline: none;
+}
+.error-mensage {
+  width: 55%;
+  text-align: start;
+}
+.inputs small {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.inputs img {
+  height: 3vh;
+  position: relative;
+}
+.lead-local-infos {
+  grid-area: local;
+
+  border-top: 1px dotted gray;
+}
+.lead-infos {
+  grid-area: infos;
+  padding: 3vh;
+  width: 65vw;
+}
+
+.simple-infos {
+  grid-area: simple;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 2vh;
+  gap: 3vh;
+  flex-direction: column;
+
+  height: 90vh;
+  border-radius: 5vh;
+  width: 35vw;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.lead-img-new {
+  height: 20vh;
+}
+.lead-img-new img {
+  height: 100%;
+}
+
+.register-area form #nome:focus,
+#mail:focus,
+#tel:focus {
+  outline: none;
+}
+
+.lead-local-infos {
+  display: flex;
+
+  flex-direction: column;
+  width: 100%;
+  justify-content: start;
+  padding: 2vh;
+
+  gap: 0.5vh;
+}
+.area1 {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 15vh;
+  width: 100%;
+}
+.area2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+}
+.title-area {
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  flex-direction: row;
+}
+.title-area img {
+  height: 5vh;
+}
+
+.area1 select,
+.area2 select,
+#Data,
+#Decisor,
+#nicho {
+  padding: 1.5vh 5vh;
+  border: none;
+  width: 40%;
+  margin: 2vh;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+  border-bottom: 1px solid black;
+}
+.area1 select:focus,
+.area2 select:focus,
+#Data:focus,
+#Decisor:focus,
+#nicho:focus {
+  outline: none;
+}
+
+#register-btn {
+  background-color: #287ea3;
+  width: 20vw;
+  height: 7vh;
+  border-radius: 10vh;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  transition: 0.5s;
+  cursor: pointer;
+  position: absolute;
+  bottom: 22%;
+  left: 6%;
+}
+#register-btn:hover {
+  background-color: gray;
+  transform: scale(1.05);
+}
+
+.more-leads-area {
+  background-color: white;
+
+  position: fixed;
+  display: none;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
+
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 2vh;
+  z-index: 3;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 2vh;
+  border-radius: 2vh;
+}
+.more-area {
+  height: 95%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+}
+.simple-lead-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  border-radius: 2vh;
+}
+.lead-local-infos-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 50%;
+}
+.lead-img-more {
+  height: 20vh;
+
+  width: 20%;
+  z-index: 2;
+}
+.lead-img-more img {
+  height: 100%;
+}
+.contact-infos {
+  width: 80%;
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  flex-direction: column;
+}
+.lead-id-more,
+.lead-name-more,
+.lead-tel-more,
+.lead-mail-more,
+.lead-nicho-more,
+.lead-interess-more {
+  color: black;
+  padding: 2vh;
+  margin: 1vh;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-bottom: 1px solid black;
+}
+.lead-id-more p,
+.lead-name-more p,
+.lead-tel-more p,
+.lead-mail-more p,
+.lead-nicho-more p,
+.lead-interess-more p {
+  font-weight: bold;
+}
+.lead-id-more span,
+.lead-name-more span,
+.lead-tel-more span,
+.lead-mail-more span,
+.lead-nicho-more span,
+.lead-interess-more span {
+  font-weight: normal;
+}
+
+.lead-uf-more,
+.lead-cidade-more,
+.lead-type-more {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 2vh;
+  width: 70%;
+  padding: 2vh;
+  margin: 1vh;
+
+  border-bottom: 1px solid black;
+}
+.lead-uf-more p,
+.lead-cidade-more p,
+.lead-type-more p {
+  color: black;
+  font-weight: bold;
+}
+.lead-uf-more span,
+.lead-cidade-more span,
+.lead-type-more span {
+  color: black;
+  font-weight: lighter;
+}
+
+#more-lead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.more-btn {
+  height: 2.5vh;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4vh;
+  border: none;
+  cursor: pointer;
+}
+.more-btn img {
+  height: 80%;
+}
+.more-btn img:hover {
+  filter: grayscale(1);
+  transform: scale(1.05);
+}
+
+.search {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: cente2r;
+  width: 20vw;
+  border-radius: 20vh;
+  background-color: white;
+  border: 0.5px solid rgb(202, 202, 202);
+  top: 3.5%;
+  left: 12%;
+  padding: 0.5vh;
+}
+#button-search {
+  background-color: #f5f5f5;
+  height: 7vh;
+  padding: 2vh;
+  border: none;
+
+  clip-path: circle();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 2;
+}
+#button-search img {
+  height: 90%;
+}
+
+#Search-bar {
+  display: block;
+  width: 90%;
+  border-radius: 20vh;
+  border: none;
+  padding: 2vh;
+}
+#Search-bar:focus {
+  outline: none;
+}
+#sellflux-btn {
+  cursor: pointer;
+
+  height: 3.5vh;
+  border: none;
+  clip-path: circle();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sellflux-btn img {
+  height: 100%;
+}
+.sellflux {
+  display: none;
+  background-color: white;
+  position: fixed;
+  z-index: 3;
+
+  height: 100vh;
+  width: 100vw;
+}
+.sellflux-area {
+  height: 100vh;
+  widows: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
+  font-size: 1.3em;
+  background-color: white;
+}
+.sellflux-area img {
+  height: 10vh;
+}
+.close3 {
+  position: absolute;
+  background-color: transparent;
+  top: 0%;
+  right: 0%;
+  height: 3.5vh;
+  width: 3.5vh;
+  border: none; 
+  
+}
+.close3:hover {
+  background-color: red;
+  transition: 1.1s;
+}
+.close3 img {
+  height: 100%;
+}
+
+.close3 img:hover {
+  filter: invert(1);
+}
+.sellflux-area form {
+  width: 50vw;
+  
+}
+.form-lead {
+  padding: 2vh;
+  padding-top: 1vh;
+  border-radius: 2vh;
+  
+  border: 1px solid gray;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.buttons-navgator {
+  
+  display: flex;
+  align-items: center;
+  justify-content:start; 
+  width: 100%; 
+  padding: 2vh;
+  flex-direction: row;
+  gap: 2vh;  
+  position: relative; 
+  bottom:11.1%; 
+  
+ 
+}
+.posMeeting,
+.Lead-Fria { 
+  padding: 2vh;
+  background-color: white;
+  border-top: 1px solid gray;
+  border-radius: 2vh;  
+  transition: 0.5s; 
+ cursor: pointer;
+} 
+.Lead-Fria {
+ background-color: rgb(39, 39, 39);
+ color: white;
+} 
+

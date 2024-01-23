@@ -1,0 +1,38 @@
+{
+    "servicos":[
+        {
+            "nome":"Tráfego Pago"
+        },
+        {
+            "nome":"Acessoria e Acompanhamento"
+        },
+        {
+            "nome":"Criação de Sites"
+        },
+        {
+            "nome":"Designer"
+        },
+        {
+            "nome":"Gestão de Redes"
+        }, 
+        {
+            "nome":"Videos"
+        }, 
+        {
+            "nome":"Acionamentos"
+        },
+        {
+            "nome":"Automação de Atendimento"
+        },
+        {
+            "nome":"Google Meu Nogócio"
+        },
+        {
+            "nome":"E-commerce"
+        },
+        {
+            "nome":"Registro de Marca (INPI)"
+        }
+
+    ]
+}

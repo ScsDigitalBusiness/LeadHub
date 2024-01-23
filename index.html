@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Thiago Duarte Miranda Dias" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/utilites/faviicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/sidebar.css" />
+    <link rel="stylesheet" href="assets/css/principal-area.css" />
+    <title>Lead Hub</title>
+  </head>
+
+  <body>
+    <!--register area 
+    é aqui onde efetuamos o registro de uma nova lead
+  -->
+    <div class="register">
+      <div class="close">
+        <img src="assets/utilites/close.svg" alt="fechar" />
+      </div>
+      <fieldset id="register-area" class="register-area">
+        <!--forms onde os camapos de preenchimento se concentram-->
+        <form
+          id="form-body"
+          class=""
+          action="https://api.sheetmonkey.io/form/rNmyPRztfhCpQ8koxNxxWT"
+          method="POST"
+        >
+          <!--INPUT DE NOME-->
+          <div class="simple-infos">
+            <div class="lead-img-new">
+              <img src="assets/utilites/user.png" alt="" />
+            </div>
+            <div class="inputs">
+              <div class="input-body">
+                <div class="input-img">
+                  <img src="assets/utilites/nameicon.svg" alt="" />
+                </div>
+                <input
+                  name="Nome"
+                  required
+                  id="nome"
+                  type="text"
+                  placeholder="Nome*"
+                />
+              </div>
+              <div class="error-mensage">
+                <small
+                  id="nameError"
+                  style="color: red; font-weight: bold"
+                ></small>
+              </div>
+            </div>
+            <!--INPUT DE TELEFONE-->
+            <div class="inputs">
+              <div class="input-body">
+                <div class="input-img">
+                  <img src="assets/utilites/tellicon.svg" alt="" />
+                </div>
+                <input
+                  name="Telefone"
+                  required
+                  id="tel"
+                  type="tel"
+                  placeholder="Telefone*"
+                />
+              </div>
+              <div class="error-mensage">
+                <small
+                  id="tellError"
+                  style="color: red; font-weight: bold"
+                ></small>
+              </div>
+            </div>
+
+            <div class="inputs">
+              <div class="input-body">
+                <div class="input-img">
+                  <img src="assets/utilites/email-icon.svg" alt="" />
+                </div>
+                <input
+                  name="E-mail"
+                  id="mail"
+                  type="email"
+                  placeholder="E-mail"
+                />
+              </div>
+              <div class="error-mensage">
+                <small
+                  id="errorEmail"
+                  style="color: red; font-weight: bold"
+                ></small>
+              </div>
+            </div>
+          </div>
+          <!--SEÇÃO DE INPUTS DE LOCALIZAÇÃO E INFORMAÇÕES ADICIONAIS-->
+          <div class="lead-local-infos">
+            <!--INPUT DE ESTADO-->
+            <div class="title-area">
+              <h2>Localização</h2>
+              <img src="assets/utilites/location.svg" alt="" />
+            </div>
+            <div class="area1">
+              <select required name="Estado" id="uf">
+                <option value="Disable" disabled selected>
+                  Insira o Estado
+                </option>
+              </select>
+              <!--INPUT CIDADE-->
+              <select required name="Cidade" id="cidade">
+                <option value="Disable" disabled selected>
+                  Insira a Cidade
+                </option>
+              </select>
+              <!--INPUT TIPO DE LEAD OU QUALIFICAÇÃO-->
+              <select required name="Tipo-de-Lead" id="tipo_lead">
+                <option value="Disable" disabled selected>
+                  Escolha o Tipo de Lead
+                </option>
+                <option value="Cliente Ativo">Cliente Ativo</option>
+                <option value="Potencial Cliente">Potencial Cliente</option>
+              </select>
+              <!--INPUT QUALIFICAÇÃO-->
+              <select required name="Qualificação" id="Qualification">
+                <option value="Disable" disabled selected>
+                  Escolha a Qualificação da Lead
+                </option>
+                <option value="Fria">Fria</option>
+                <option value="Quente">Quente</option>
+                <option value="Pos Meeting">Pós Meeting</option>
+              </select>
+            </div>
+            <!--INPUT DE NICHO OU ÁREA DE ATUAÇÃO-->
+          </div>
+          <div class="lead-infos">
+            <div class="title-area">
+              <h2>Lead</h2>
+              <img src="assets/utilites/lead-icon-svg.svg" alt="" />
+            </div>
+            <div class="area2">
+              <input
+                class="nicho"
+                required
+                type="text"
+                id="nicho"
+                name="Nicho"
+                placeholder="Informe o Nicho"
+              />
+              <input
+                class="Decisor"
+                required
+                type="text"
+                id="Decisor"
+                name="Decisor"
+                placeholder="Nome do Decisor"
+              />
+              <!--INPUT DE INTERESSE, TIPO DE  SERVIÇO QUE E A LEAD ESTÁ INTERESSADA-->
+              <select required name="Interesse" id="Interesse">
+                <option value="Disable" disabled selected>
+                  Escolha a Qualificação da Lead
+                </option>
+              </select>
+              <select required name="Resposável" id="Resposavel">
+                <option value="Disable" disabled selected>
+                  Escolha o Resposável do Cadastro
+                </option>
+              </select>
+              <!-- COMO NOS ACHOU  -->
+              <select required name="Meio" id="route">
+                <option value="Disable" disabled selected>
+                  Como este Lead nos encontrou
+                </option>
+              </select>
+              <input
+                required
+                placeholder="Data e Cadastro"
+                type="date"
+                id="Data"
+                name="Data-de-Cadastro"
+              />
+            </div>
+          </div>
+          <a href="index.html"
+            ><button id="register-btn" type="submit">Cadastrar</button></a
+          >
+        </form>
+      </fieldset>
+    </div>
+    <div class="sellflux">
+      <div class="close3">
+        <button id="close3" class="close3">
+          <img src="assets/utilites/close.svg" alt="" />
+        </button>
+      </div>
+      <div id="sellflux-area" class="sellflux-area">
+        <img src="assets/utilites/sellflux.svg" alt="" />
+        <div class="title">
+          <h2 id="sellFlux-title">Cadastrar Lead Fria SellFlux</h2>
+        </div>
+
+        <div id="forms-area-sellflux" class="form-lead">
+          <div class="buttons-navgator">
+            <div id="meeting" onclick="ShowPosMeetingForm()" class="posMeeting">
+              Pós Meeting
+            </div>
+            <div id="chill" onclick="ShowColdLeadForm()" class="Lead-Fria">
+              Lead-Fria
+            </div>
+          </div>
+        </div>
+        <div class="form-pos-meeting"></div>
+      </div>
+    </div>
+    <!--section principal, está é a estrutura da tela inicial, diferente da  section register, ela está visível para o usuário, é  área onde podemos ver os dados do usuário, os dados das leads-->
+    <main class="content">
+      <!--dentro da section principal temos o cabeçalho, onde está localizado a logo e  o user, logo após temos a slidebar, a barra lateral de navegação -->
+      <header class="cabecalho">
+        <div class="notification-area">
+          <div class="notification-img">
+            <img src="assets/utilites/notifications-icon]].svg" alt="" />
+          </div>
+          <div class="notification-text">Notificações</div>
+          <div class="number-of-notifications">4</div>
+        </div>
+        <div class="user-dados">
+          <div class="user-name">
+            <p class="Username">Olá, <span class="name-user"></span></p>
+          </div>
+          <a href="setings-page/index.html"
+            ><img
+              id="user-foto"
+              class="user-foto"
+              src="assets/utilites/user.png"
+              alt="userfoto"
+          /></a>
+        </div>
+      </header>
+      <!--SlideBar Onde os links de navegação ficam concentrados, aqui podemos navegar de uma página para a outra-->
+      <div class="slidebar">
+        <div class="logo">
+          <img src="assets/utilites/logo.svg" alt="logo" />
+        </div>
+        <ul class="links-bar">
+          <li>
+            <a href="dash-page/dash.html"
+              ><img
+                class="home-img"
+                src="assets/utilites/apps-dash.svg"
+                alt="dash-board"
+            /></a>
+          </li>
+          <li>
+            <a href="crm-page/crm.html"
+              ><img
+                class="crm-img"
+                src="assets/utilites/crm icon new.svg"
+                alt="dash-board"
+            /></a>
+          </li>
+          <li>
+            <a href="index.html"
+              ><img
+                class="lead-icon"
+                src="assets/utilites/lead-icon-svg-select.svg"
+                alt="leads-area"
+            /></a>
+          </li>
+          <li>
+            <button id="new-Lead">
+              <img src="assets/utilites/add-icon.svg" alt="" />
+            </button>
+          </li>
+          <li>
+            <button id="sellflux-btn">
+              <img src="assets/utilites/integration-icon.svg" alt="" />
+            </button>
+          </li>
+          <li id="sentings">
+            <a href="setings-page/index.html">
+              <img
+                class="senting-img"
+                src="assets/utilites/settings.svg"
+                alt="sentings"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--Esta section é onde está localidado o status a lead e a area da lead, é aqui que podemos observar onde as leads ficam salvas-->
+      <main class="dash">
+        <table border="0" id="area-leads">
+          <thead>
+            <tr id="lead-status">
+              <th id="border-radius-top-left">ID</th>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Telefone</th>
+              <th id="border-radius-top-right">...</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-leads"></tbody>
+        </table>
+      </main>
+    </main>
+    <div class="search">
+      <button id="button-search" class="button-seach">
+        <img src="assets/utilites/search.svg" alt="" />
+      </button>
+      <input
+        id="Search-bar"
+        placeholder="Pesquisar..."
+        type="search"
+        class="Barra-de-Pesquisa"
+      />
+    </div>
+    <!--IMPORTAÇÃO DO FRAME WORK JQUERY-->
+    <script src="assets/js/code.jquery.com_jquery-3.7.1.js"></script>
+    <!--SCRIPT DO PROJETO PRINCIPAL-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+      integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/IBGEAPI.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/validations.js"></script>
+    <script src="assets/js/showDataUser.js"></script>
+    <script src="assets/js/sellflux-forms-nav.js"></script>
+  </body>
+</html>
